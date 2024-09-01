@@ -4,8 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"lint": "eslint --ext .ts,.jsx,.tsx  --fix --quiet ./packages",
-		"prepare": "husky install"
+		"lint": "eslint --ext .ts,.jsx,.tsx,.js  --fix --quiet ./packages"
 	},
 	"keywords": [],
 	"author": "",
