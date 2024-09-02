@@ -1,2 +1,2 @@
-const aa = 124;
+const aa = 1224;
 console.log(aa);
