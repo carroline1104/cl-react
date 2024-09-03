@@ -36,6 +36,7 @@ function performUnitOfWork(fiber: FiberNode) {
 }
 function completeUnitOfWork(fiber: FiberNode) {
 	let node: FiberNode | null = fiber;
+	// 循环的意义是一直向上找到第一个存在兄弟的节点， 将workInProgress付给这个节点， 以便于进行后续遍历
 	do {
 		completeWork(node);
 		const sibling = node.sibling;
