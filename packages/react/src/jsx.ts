@@ -3,12 +3,12 @@ import {
 	ElementType,
 	Key,
 	Props,
-	ReactElement as ReactElementInfo,
+	ReactElementType,
 	Ref
 } from 'shared/ReactTypes';
 // @ts-ignore
 const ReactElement = function (type, key, ref, props) {
-	const element: ReactElementInfo = {
+	const element: ReactElementType = {
 		$$typeof: REACT_ELEMENT_TYPE,
 		type,
 		key,
@@ -50,7 +50,7 @@ export const jsx = (
 			props.children = maybeChildren;
 		}
 	}
-	return ReactElement(type, key, ref, props);
+	return ReactElementType(type, key, ref, props);
 };
 
 export const jsxDEV = (type: ElementType, config: any) => {
@@ -73,5 +73,5 @@ export const jsxDEV = (type: ElementType, config: any) => {
 			props[prop] = val;
 		}
 	}
-	return ReactElement(type, key, ref, props);
+	return ReactElementType(type, key, ref, props);
 };
